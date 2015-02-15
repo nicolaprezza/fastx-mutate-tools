@@ -166,7 +166,7 @@ public class FastxMutateTools {
 		
 		//apply bisulfite conversion
 		
-		if(bs_fwd>0 && base_to_int(c)==base_to_int('C')){
+		if(base_to_int(c)==base_to_int('C')){
 			
 			if(Math.random()<bs_fwd){
 				
@@ -185,7 +185,7 @@ public class FastxMutateTools {
 			}
 		
 			
-		}else if(bs_rev>0 && base_to_int(c)==base_to_int('G')){
+		}else if(base_to_int(c)==base_to_int('G')){
 			
 			if(Math.random()<bs_rev){
 				
@@ -340,6 +340,7 @@ public class FastxMutateTools {
 				}else{
 				
 					out_fastx.write(mutate(c,chr,pos));
+					pos++;
 					
 				}
 								
