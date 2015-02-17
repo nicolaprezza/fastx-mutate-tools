@@ -337,11 +337,13 @@ public class FastxMutateTools {
 					chr = line;
 					pos = start_coord;
 					
-				}else{
+				}else if(c!='\n'){
 				
 					out_fastx.write(mutate(c,chr,pos));
 					pos++;
 					
+				}else{
+					out_fastx.write('\n');
 				}
 								
 			}
